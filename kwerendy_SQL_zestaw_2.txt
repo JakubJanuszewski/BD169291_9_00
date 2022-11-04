@@ -1,0 +1,13 @@
+Zadanie 1
+SELECT * FROM osoba;
+DELETE FROM osoba WHERE nazwa='Geralt' OR nazwa='ORN';
+ALTER TABLE walizka DROP FOREIGN KEY walizka_ibfk_1;
+ALTER TABLE przetwory DROP FOREIGN KEY przetwory_ibfk_1;
+ALTER TABLE osoba MODIFY id_postaci INT NOT NULL;
+ALTER TABLE osoba DROP PRIMARY KEY;
+ZADANIE 2
+UPDATE osoba SET pesel ='888888888' WHERE id_postaci='8';
+ALTER TABLE osoba ADD NOT NULL PRIMARY KEY(pesel);
+ALTER TABLE osoba MODIFY rodzaj ENUM('wiking','ptak','kobieta','syrena');
+INSERT INTO osoba (id_postaci, nazwa, rodzaj, wiek, pesel) VALUES ('11', 'Gertruda Nieszczera', 'syrena', '120', '8976
+5');
